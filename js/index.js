@@ -40,6 +40,9 @@ const siteContent = {
 // Example: Update the img src for the logo
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//top navigation-------------------------------------
+
 //displaying my top navigation using a for each
 const topNav = document.querySelectorAll('header nav a')
 topNav.forEach((link, index) => {
@@ -49,6 +52,9 @@ topNav.forEach((link, index) => {
 topNav.forEach((item) => {
   item.style.color = 'green';
 })
+
+//cta content------------------------------------
+
 // making ctaH1 telling it to = a queryselector in which i need to find it's specific location
 const ctaH1 = document.querySelector('section div h1')
 //Taking text content and adding the information from above to display
@@ -58,5 +64,15 @@ const topButton = document.querySelector('section div button')
 topButton.textContent = siteContent.cta.button
 //adding image to site
 const headImg = document.getElementById('cta-img')
-logo.setAttribute('src',siteContent['cta']['img-src'])
+headImg.setAttribute('src',siteContent['cta']['img-src'])
+
+//Main contents-------------------------------------
+//top content header
+const tophead = document.querySelectorAll('.top-content h4')
+tophead[0].textContent = siteContent['main-content']['features-h4']
+tophead[1].textContent = siteContent['main-content']['about-h4']
+
+//top paragraphs
+
+
 
