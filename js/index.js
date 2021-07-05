@@ -121,3 +121,4 @@ document.querySelector("nav").prepend(moreCatPhotos);
 topNav.forEach((item) => {
   item.style.color = "green";
 });
+
