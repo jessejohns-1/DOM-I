@@ -38,11 +38,25 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
-let topNav = document.querySelectorAll('header nav a')
+//displaying my top navigation using a for each
+const topNav = document.querySelectorAll('header nav a')
 topNav.forEach((link, index) => {
   link.textContent = siteContent.nav[`nav-item-${index+1}`];
 })
+//using my for each to add the color green to the text
+topNav.forEach((item) => {
+  item.style.color = 'green';
+})
+// making ctaH1 telling it to = a queryselector in which i need to find it's specific location
+const ctaH1 = document.querySelector('section div h1')
+//Taking text content and adding the information from above to display
+ctaH1.textContent = siteContent.cta.h1
+//creating button
+const topButton = document.querySelector('section div button')
+topButton.textContent = siteContent.cta.button
+//adding image to site
+const headImg = document.getElementById('cta-img')
+logo.setAttribute('src',siteContent['cta']['img-src'])
 
